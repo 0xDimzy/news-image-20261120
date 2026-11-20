@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Friday 20 November 2026 — The World's News in One Picture</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1024px;height:1024px;overflow:hidden;background:#f4ecd7}
+  body{font-family:"Noto Sans",sans-serif;color:#191510;padding:7px 13px 3px}
+  .serif{font-family:"Noto Serif",Georgia,serif}
+  /* header */
+  header{text-align:center;padding-bottom:4px;border-bottom:5px double #191510}
+  .eye{font-size:10px;font-weight:800;letter-spacing:4.5px;color:#a12a1a}
+  header h1{font-family:"Noto Serif",Georgia,serif;font-size:34px;font-weight:900;line-height:1.02;margin-top:1px}
+  .deck{font-size:12.5px;font-weight:800;letter-spacing:2.6px;margin-top:3px}
+  .deck b{color:#a12a1a}
+  /* numbers band */
+  .band{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:5px 0 4px}
+  .band div{background:#191510;color:#f4ecd7;text-align:center;padding:4px 3px 3px;border-radius:3px}
+  .band .v{font-family:"Noto Serif",Georgia,serif;font-size:17px;font-weight:900;line-height:1;color:#fff}
+  .band .v.hot{color:#ff9a82}
+  .band .c{font-size:8.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;line-height:1.25;margin-top:3px}
+  /* section rule */
+  .rule{display:flex;align-items:center;gap:10px;margin:4px 0 3px}
+  .rule .t{font-size:12px;font-weight:900;letter-spacing:3px;white-space:nowrap}
+  .rule .ln{flex:1;height:2px;background:#191510}
+  .rule .n{font-size:10px;font-weight:800;color:#a12a1a;white-space:nowrap}
+  /* front stories */
+  .front{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .front article{border:1.8px solid #191510;background:#fdfaf0}
+  .front svg{display:block;width:100%;height:44px;border-bottom:1.5px solid #191510}
+  .front .in{padding:4px 8px 5px}
+  .tag{font-size:9.5px;font-weight:900;letter-spacing:1.8px;color:#a12a1a}
+  .front h2{font-family:"Noto Serif",Georgia,serif;font-size:15px;font-weight:900;line-height:1.08;margin:2px 0 3px}
+  .front p{font-size:10px;line-height:1.26}
+  .front .by{font-size:9px;font-style:italic;color:#5c5340;margin-top:3px}
+  /* drawn cards */
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+  .grid .wide{grid-column:span 1}
+  .tile{border:1.5px solid #191510;background:#fdfaf0;border-radius:2px;overflow:hidden}
+  .tile svg{display:block;width:100%;height:26px;border-bottom:1px solid #191510}
+  .tile .in{padding:3px 5px 3px}
+  .tile .where{font-size:8px;font-weight:900;letter-spacing:1px;color:#a12a1a}
+  .tile h3{font-size:11px;font-weight:900;line-height:1.1;margin-top:1px}
+  .tile p{font-size:8.6px;line-height:1.22;margin-top:2px;color:#26221a}
+  .tile .src{font-size:8.5px;font-weight:700;color:#6a5f47;margin-top:2px}
+  .row2{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:4px}
+  /* map */
+  .mapbox{margin-top:4px;border:1.8px solid #191510;background:#eef2e2;padding:3px 8px 2px}
+  .mapbox .mh{font-size:11px;font-weight:900;letter-spacing:2px}
+  .mapbox .mh b{color:#a12a1a}
+  .maprow{display:flex;gap:10px;align-items:center}
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;font-size:9.5px;font-weight:700;white-space:nowrap}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;border:1px solid #191510}
+  /* briefs */
+  .notes{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px}
+  .note{display:flex;gap:7px;padding:1px 0;border-top:1px solid #b9ab8a;font-size:10px;line-height:1.18}
+  .note .no{flex:none;width:17px;height:17px;border-radius:50%;background:#a12a1a;color:#fff;font-size:9.5px;font-weight:800;text-align:center;line-height:17px;margin-top:1px}
+  .note b{font-size:10.5px}
+  /* footer */
+  footer{display:grid;grid-template-columns:1.45fr 1fr;gap:10px;margin-top:3px}
+  .check{border:2px solid #a12a1a;background:#fdf1e8;padding:4px 8px}
+  .check .h{font-size:10.5px;font-weight:900;letter-spacing:2px;color:#a12a1a;margin-bottom:2px}
+  .check p{font-size:9.2px;line-height:1.24}
+  .tally{border:1.5px solid #191510;background:#fdfaf0;padding:4px 8px}
+  .tally .h{font-size:11px;font-weight:900;letter-spacing:2px;margin-bottom:4px}
+  .tally .chips{display:flex;flex-wrap:wrap;gap:4px}
+  .tally .chips span{font-size:9.5px;font-weight:800;border:1.5px solid #191510;border-radius:20px;padding:1px 7px;background:#fff}
+  .tally .chips b{color:#a12a1a}
+  .fine{margin-top:3px;border-top:2px solid #191510;padding-top:2px;font-size:8.5px;line-height:1.25;text-align:center;color:#3d3627}
+  .fine b{color:#191510}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eye">THE WORLD'S NEWS IN ONE PICTURE</div>
+  <h1>Friday 20 November 2026</h1>
+  <div class="deck"><b>36 SOURCED STORIES</b> · <b>7 REGIONS</b> · <b>13 DRAWN</b></div>
+</header>
+
+<section class="band">
+  <div><div class="v">300,000+</div><div class="c">People sheltered in Odisha</div></div>
+  <div><div class="v hot">~400</div><div class="c">Drones in the Kyiv barrage</div></div>
+  <div><div class="v">100,000</div><div class="c">UK–EU youth-mobility places</div></div>
+  <div><div class="v">60.7%</div><div class="c">Tumours shrank in pill trial</div></div>
+  <div><div class="v hot">Day 265</div><div class="c">Hormuz shut · Brent near $92</div></div>
+  <div><div class="v">$3,525</div><div class="c">Gold at a 14-month low</div></div>
+</section>
+
+<div class="rule"><div class="t">THE FRONT PAGE</div><div class="ln"></div><div class="n">3 stories that led the day</div></div>
+<section class="front">
+  <article>
+    <svg preserveAspectRatio="none" viewBox="0 0 320 104" role="img" aria-label="Cyclone waves striking a sheltered coast">
+      <rect width="320" height="104" fill="#d7e6ee"/>
+      <path d="M0 62 Q55 52 110 60 T220 58 T320 60 L320 104 L0 104 Z" fill="#2e6b9e"/>
+      <path d="M0 76 Q60 67 120 74 T320 72 L320 104 L0 104 Z" fill="#1d4e7d"/>
+      <path d="M0 92 Q70 84 140 90 T320 88 L320 104 L0 104 Z" fill="#173c63"/>
+      <rect x="0" y="54" width="170" height="8" fill="#e3d3a8"/>
+      <g><path d="M18 54 l10 -16 10 16 z" fill="#f2c14e"/><path d="M44 54 l10 -16 10 16 z" fill="#f2c14e"/><path d="M70 54 l10 -16 10 16 z" fill="#f2c14e"/><path d="M96 54 l10 -16 10 16 z" fill="#f2c14e"/></g>
+      <g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round">
+        <path d="M238 14 a30 30 0 1 1 -27 45 a20 20 0 1 0 17 -33 a11 11 0 1 1 -10 18"/>
+      </g>
+      <circle cx="238" cy="44" r="6" fill="#a12a1a"/>
+      <g stroke="#2e6b9e" stroke-width="2.5" stroke-linecap="round"><path d="M30 12 l-6 12 M70 8 l-6 12 M120 10 l-6 12 M290 8 l-6 12"/></g>
+      <g fill="#ffffff"><circle cx="40" cy="66" r="2.5"/><circle cx="150" cy="70" r="2.5"/><circle cx="270" cy="68" r="2.5"/></g>
+    </svg>
+    <div class="in">
+      <div class="tag">ASIA · ODISHA, INDIA</div>
+      <h2>Akvan comes ashore; a state moves indoors</h2>
+      <p>The cyclone crossed near <b>Gopalpur</b> between 07:30 and 08:30 IST, with winds of 70–80 km/h gusting to 90. Officials counted <b>more than 300,000 people</b> in <b>9,341 shelters</b>; no deaths reported.</p>
+      <div class="by">Reported by IMD and PTI.</div>
+    </div>
+  </article>
+  <article>
+    <svg preserveAspectRatio="none" viewBox="0 0 320 104" role="img" aria-label="Night barrage over river bridges">
+      <rect width="320" height="104" fill="#1c2230"/>
+      <rect y="78" width="320" height="26" fill="#33567d"/>
+      <path d="M8 72 H312" stroke="#e8dfc4" stroke-width="5"/>
+      <path d="M48 72 V38 M128 72 V38 M208 72 V38 M272 72 V38" stroke="#e8dfc4" stroke-width="4"/>
+      <path d="M48 38 Q128 18 208 38 Q260 26 312 38" fill="none" stroke="#e8dfc4" stroke-width="3"/>
+      <path d="M120 38 l16 12 l-11 7" fill="none" stroke="#ff6b52" stroke-width="5" stroke-linecap="round"/>
+      <g stroke="#f2c14e" stroke-width="3" stroke-linecap="round"><path d="M40 6 L96 26"/><path d="M150 4 L200 24"/><path d="M248 8 L292 26"/></g>
+      <g fill="#ff6b52"><circle cx="98" cy="28" r="5"/><circle cx="202" cy="26" r="5"/><circle cx="294" cy="28" r="5"/></g>
+      <g fill="#f7f2e7"><circle cx="24" cy="14" r="2"/><circle cx="110" cy="8" r="2"/><circle cx="228" cy="10" r="2"/><circle cx="306" cy="14" r="2"/></g>
+      <g stroke="#8fb4d9" stroke-width="2"><path d="M30 88 h44 M120 92 h52 M230 88 h44"/></g>
+    </svg>
+    <div class="in">
+      <div class="tag">EUROPE · KYIV, UKRAINE</div>
+      <h2>One night, three bridges hit</h2>
+      <p>An overnight assault of roughly <b>400 drones and more than 100 missiles</b> damaged all three Dnipro crossings. Mayor Klitschko put Kyiv's toll at <b>3 dead and 15 hurt</b>, with 8 killed nationwide.</p>
+      <div class="by">Reported by Reuters; toll via Mayor Klitschko.</div>
+    </div>
+  </article>
+  <article>
+    <svg preserveAspectRatio="none" viewBox="0 0 320 104" role="img" aria-label="Summit table with flags and a stalled clock">
+      <rect width="320" height="104" fill="#efe6c9"/>
+      <rect x="24" y="66" width="272" height="10" fill="#191510"/>
+      <g><rect x="52" y="30" width="26" height="36" fill="#191510"/><rect x="146" y="30" width="26" height="36" fill="#191510"/><rect x="240" y="30" width="26" height="36" fill="#191510"/></g>
+      <g><rect x="52" y="18" width="26" height="12" fill="#2e6b9e"/><rect x="146" y="18" width="26" height="12" fill="#a12a1a"/><rect x="240" y="18" width="26" height="12" fill="#2e7d32"/></g>
+      <circle cx="160" cy="14" r="10" fill="#fdfaf0" stroke="#a12a1a" stroke-width="3"/>
+      <path d="M160 8 L160 14 L166 18" stroke="#a12a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <g fill="#191510"><circle cx="65" cy="54" r="6"/><circle cx="159" cy="54" r="6"/><circle cx="253" cy="54" r="6"/></g>
+      <text x="160" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#a12a1a">FINAL DAY · STILL NO TEXT</text>
+    </svg>
+    <div class="in">
+      <div class="tag">GLOBAL · COP31, ANTALYA</div>
+      <h2>Climate talks reach the last morning empty-handed</h2>
+      <p>The closing day opened without an agreement. A fresh draft had dropped fossil-fuel wording and the <b>$120bn</b> adaptation figure; hosts pushed <b>“35 by 35”</b> and Panama warned it could block.</p>
+      <div class="by">Reported from the summit floor.</div>
+    </div>
+  </article>
+</section>
+
+<div class="rule"><div class="t">DRAWN CARDS</div><div class="ln"></div><div class="n">13 scenes · each with its source</div></div>
+<section class="grid">
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Falling market chart"><rect width="150" height="46" fill="#fdecea"/><g stroke="#d8b9b0"><path d="M0 12 H150 M0 24 H150 M0 36 H150"/></g><path d="M6 8 L42 18 L66 13 L104 30 L138 40" fill="none" stroke="#a12a1a" stroke-width="3.5" stroke-linecap="round"/><path d="M126 40 H138 V28" fill="none" stroke="#a12a1a" stroke-width="3.5" stroke-linecap="round"/></svg>
+    <div class="in"><div class="where">ASIA · MARKETS</div><h3>AI rout sweeps Asian bourses</h3><p>Taiwan's Taiex dropped 6.2%, Seoul's KOSPI 5.2% and Tokyo's Nikkei 4.8%.</p><div class="src">Reuters</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Two flags shaking hands"><rect width="150" height="46" fill="#e8eef7"/><rect x="14" y="8" width="34" height="22" fill="#1d4e7d"/><rect x="102" y="8" width="34" height="22" fill="#a12a1a"/><path d="M48 19 H102" stroke="#191510" stroke-width="3"/><path d="M58 36 q8 -8 17 0 q9 8 17 0" fill="none" stroke="#191510" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="in"><div class="where">EUROPE · BRUSSELS</div><h3>London and Brussels sign a reset</h3><p>Prime Minister Andy Burnham closed food-trade and mobility terms, with 100,000 youth places.</p><div class="src">Helsinki Times</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Protest march with placards"><rect width="150" height="46" fill="#fdf3e3"/><rect x="12" y="6" width="30" height="20" fill="#a12a1a"/><rect x="58" y="6" width="30" height="20" fill="#f2c14e"/><rect x="104" y="6" width="30" height="20" fill="#a12a1a"/><path d="M27 26 V40 M73 26 V40 M119 26 V40" stroke="#191510" stroke-width="3"/><g fill="#191510"><circle cx="27" cy="42" r="3"/><circle cx="73" cy="42" r="3"/><circle cx="119" cy="42" r="3"/></g></svg>
+    <div class="in"><div class="where">EUROPE · ITALY</div><h3>General strike over the budget</h3><p>The CGIL union said over a million marched in 100+ cities against the €26bn plan.</p><div class="src">Reuters</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Rising inflation bars"><rect width="150" height="46" fill="#eef3ea"/><path d="M8 40 H142" stroke="#191510" stroke-width="2.5"/><rect x="22" y="28" width="16" height="12" fill="#7fae6d"/><rect x="56" y="20" width="16" height="20" fill="#5b8a4c"/><rect x="90" y="10" width="16" height="30" fill="#a12a1a"/><path d="M8 22 H142" stroke="#a12a1a" stroke-width="1.8" stroke-dasharray="4 3"/></svg>
+    <div class="in"><div class="where">ASIA · TOKYO</div><h3>Japan prices stay above target</h3><p>Core inflation reached 2.2% in October, a second month above the central bank's 2% goal.</p><div class="src">Reuters</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Pill beside a shrinking cell"><rect width="150" height="46" fill="#f3eaf7"/><circle cx="52" cy="23" r="15" fill="#b48ec7"/><circle cx="52" cy="23" r="7" fill="#8a5ea3"/><rect x="86" y="14" width="42" height="18" rx="9" fill="#fdfaf0" stroke="#191510" stroke-width="2.5"/><path d="M107 14 V32" stroke="#a12a1a" stroke-width="2.5"/></svg>
+    <div class="in"><div class="where">EUROPE · BARCELONA</div><h3>Cancer pill shrinks tumours</h3><p>Daraxonrasib with chemo shrank tumours in 60.7% of 61 patients; early-phase, no control arm.</p><div class="src">EORTC symposium</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Probe approaching Mercury"><rect width="150" height="46" fill="#14181f"/><circle cx="112" cy="28" r="13" fill="#c9a86a"/><circle cx="108" cy="24" r="3" fill="#a98a52"/><rect x="22" y="14" width="20" height="13" fill="#d8cdb4"/><path d="M10 8 L24 16 M10 30 L24 24" stroke="#f2c14e" stroke-width="3" stroke-linecap="round"/><path d="M44 20 Q74 24 96 27" fill="none" stroke="#d8cdb4" stroke-width="2" stroke-dasharray="4 3"/></svg>
+    <div class="in"><div class="where">SPACE · MERCURY</div><h3>Eight years out, almost there</h3><p>BepiColombo made its final approach; the orbit-insertion burn is set for Saturday.</p><div class="src">ESA</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 150 46" role="img" aria-label="Cricket bat and ball"><rect width="150" height="46" fill="#e8f0e4"/><rect x="34" y="4" width="14" height="32" rx="5" fill="#c9a86a"/><circle cx="94" cy="28" r="11" fill="#a12a1a"/><path d="M94 18 q7 10 0 20" fill="none" stroke="#fff" stroke-width="2"/><text x="122" y="32" font-size="15" font-weight="bold" fill="#191510">118</text></svg>
+    <div class="in"><div class="where">OCEANIA · WELLINGTON</div><h3>A century in every format</h3><p>Glenn Phillips' 118: first to hundred vs India in all three formats in one year.</p><div class="src">ICC</div></div>
+  </article>
+</section>
+<section class="row2">
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Ballot box and ticked paper"><rect width="160" height="46" fill="#eef3ea"/><rect x="42" y="22" width="76" height="20" fill="#191510"/><rect x="58" y="4" width="44" height="22" fill="#fdfaf0" stroke="#191510" stroke-width="2.5"/><path d="M68 15 l6 6 12 -12" fill="none" stroke="#a12a1a" stroke-width="3.5" stroke-linecap="round"/></svg>
+    <div class="in"><div class="where">AMERICAS · EL SALVADOR</div><h3>Bukele files for a third term</h3><p>The president registered before the deadline; voters go to the polls on 28 February 2027.</p><div class="src">Reports</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Tanker waiting in a closed strait"><rect width="160" height="46" fill="#e3edf5"/><path d="M0 32 Q26 25 52 32 T104 32 T160 32 L160 46 L0 46 Z" fill="#2e6b9e"/><path d="M36 30 H110 L100 39 H48 Z" fill="#191510"/><rect x="62" y="18" width="22" height="12" fill="#a12a1a"/><path d="M132 6 l14 14 M146 6 l-14 14" stroke="#a12a1a" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="in"><div class="where">MIDDLE EAST · HORMUZ</div><h3>Strait still shut, day 265</h3><p>About three ships crossed vs a pre-war norm near 88 a day; Brent near $92.</p><div class="src">Windward trackers</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Amazon trees over a river"><rect width="160" height="46" fill="#e8f0e4"/><path d="M22 38 l16 -26 16 26 z" fill="#5b8a4c"/><path d="M62 38 l14 -21 14 21 z" fill="#7fae6d"/><path d="M102 38 l12 -17 12 17 z" fill="#5b8a4c"/><path d="M6 41 Q80 33 154 41" fill="none" stroke="#2e6b9e" stroke-width="3.5"/><circle cx="138" cy="10" r="6" fill="#f2c14e"/></svg>
+    <div class="in"><div class="where">AMERICAS · BRAZIL</div><h3>Raoni's forest is recognised</h3><p>President Lula declared 362,000 ha of Amazon as Indigenous territory, visiting the 94-year-old chief.</p><div class="src">Al Jazeera</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Bank building with held rates"><rect width="160" height="46" fill="#fdf6e0"/><path d="M26 14 L80 4 L134 14 Z" fill="#191510"/><g fill="#191510"><rect x="38" y="18" width="8" height="18"/><rect x="62" y="18" width="8" height="18"/><rect x="90" y="18" width="8" height="18"/><rect x="114" y="18" width="8" height="18"/></g><rect x="26" y="38" width="108" height="4" fill="#191510"/><text x="80" y="31" text-anchor="middle" font-size="12" font-weight="bold" fill="#a12a1a">%</text></svg>
+    <div class="in"><div class="where">ASIA · BEIJING</div><h3>China holds rates an 18th month</h3><p>Loan prime rates stayed at 3.00% for one year and 3.50% for five, unchanged again.</p><div class="src">Reports</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Falling crime line still high"><rect width="160" height="46" fill="#fdecea"/><path d="M8 42 H152" stroke="#191510" stroke-width="2.5"/><path d="M12 10 L54 16 L96 22 L146 30" fill="none" stroke="#a12a1a" stroke-width="3.5" stroke-linecap="round"/><path d="M8 30 H152" stroke="#a12a1a" stroke-width="1.6" stroke-dasharray="4 3"/><text x="118" y="16" font-size="13" font-weight="bold" fill="#191510">60/day</text></svg>
+    <div class="in"><div class="where">AFRICA · PRETORIA</div><h3>Murders ease, still 60 a day</h3><p>Police recorded 5,590 killings from July to September, down 3.5% yet still about 60 daily.</p><div class="src">Official statistics</div></div>
+  </article>
+  <article class="tile">
+    <svg preserveAspectRatio="none" viewBox="0 0 160 46" role="img" aria-label="Cargo ship aground"><rect width="160" height="46" fill="#e3edf5"/><path d="M0 34 Q30 28 60 34 T120 34 T160 34 L160 46 L0 46 Z" fill="#2e6b9e"/><path d="M24 32 H132 L120 41 H38 Z" fill="#191510"/><rect x="52" y="18" width="20" height="14" fill="#a12a1a"/><rect x="76" y="18" width="20" height="14" fill="#f2c14e"/><rect x="100" y="18" width="20" height="14" fill="#2e7d32"/></svg>
+    <div class="in"><div class="where">EUROPE · LANDES, FRANCE</div><h3>Cargo ship runs aground</h3><p>The Miro G stranded off Lit-et-Mixe; all 19 crew members were taken off safely.</p><div class="src">Reports</div></div>
+  </article>
+</section>
+
+<section class="mapbox">
+  <div class="mh">WHERE FRIDAY HAPPENED — <b>COLOURED DOTS = REGION</b></div>
+  <div class="maprow">
+    <svg preserveAspectRatio="none" viewBox="0 0 780 118" width="752" height="62" role="img" aria-label="World map with story locations">
+      <rect width="780" height="118" fill="#dce8f2"/>
+      <g fill="#b9d19e" stroke="#6f9a55" stroke-width="1.6">
+        <!-- North America -->
+        <path d="M18 22 L52 10 L108 8 L152 14 L176 24 L188 34 L176 44 L158 46 L150 54 L132 58 L118 52 L100 56 L84 66 L70 60 L58 50 L40 44 L22 36 Z"/>
+        <!-- South America -->
+        <path d="M168 66 L196 60 L222 66 L234 80 L226 96 L208 108 L190 104 L178 90 L170 78 Z"/>
+        <!-- Europe -->
+        <path d="M352 18 L382 10 L412 14 L424 24 L414 34 L400 32 L392 40 L378 36 L364 38 L352 30 Z"/>
+        <!-- Africa -->
+        <path d="M368 46 L402 40 L438 44 L458 56 L462 74 L446 94 L424 106 L402 100 L386 84 L374 66 Z"/>
+        <!-- Asia -->
+        <path d="M428 16 L486 8 L556 10 L626 18 L688 26 L712 38 L696 52 L664 54 L640 66 L612 72 L592 62 L566 64 L544 74 L528 60 L506 56 L486 44 L458 36 L434 28 Z"/>
+        <!-- Australia -->
+        <path d="M648 82 L684 76 L714 82 L722 96 L700 106 L666 104 L650 94 Z"/>
+      </g>
+      <g stroke="#191510" stroke-width="1">
+        <circle cx="96" cy="34" r="5" fill="#2e7d32"/><circle cx="76" cy="46" r="5" fill="#2e7d32"/><circle cx="196" cy="78" r="5" fill="#2e7d32"/><circle cx="112" cy="44" r="5" fill="#2e7d32"/>
+        <circle cx="392" cy="24" r="5" fill="#2e6b9e"/><circle cx="378" cy="30" r="5" fill="#2e6b9e"/><circle cx="410" cy="20" r="5" fill="#2e6b9e"/><circle cx="368" cy="28" r="5" fill="#2e6b9e"/>
+        <circle cx="420" cy="72" r="5" fill="#e07b1f"/><circle cx="400" cy="92" r="5" fill="#e07b1f"/><circle cx="382" cy="56" r="5" fill="#e07b1f"/>
+        <circle cx="560" cy="44" r="5" fill="#a12a1a"/><circle cx="600" cy="30" r="5" fill="#a12a1a"/><circle cx="656" cy="34" r="5" fill="#a12a1a"/><circle cx="520" cy="52" r="5" fill="#a12a1a"/>
+        <circle cx="478" cy="48" r="5" fill="#7b3fa0"/><circle cx="492" cy="56" r="5" fill="#7b3fa0"/>
+        <circle cx="724" cy="104" r="5" fill="#c2187a"/>
+        <circle cx="746" cy="24" r="5" fill="#555555"/><circle cx="746" cy="40" r="5" fill="#555555"/>
+      </g>
+      <g font-size="8.5" font-weight="bold" fill="#3d4a35"><text x="60" y="16">N. AMERICA</text><text x="178" y="114">S. AMERICA</text><text x="356" y="8">EUROPE</text><text x="404" y="114">AFRICA</text><text x="580" y="8">ASIA</text><text x="656" y="114">AUSTRALIA</text></g>
+    </svg>
+    <div class="legend">
+      <span><i style="background:#2e6b9e"></i>Europe · 10</span>
+      <span><i style="background:#a12a1a"></i>Asia · 7</span>
+      <span><i style="background:#2e7d32"></i>Americas · 7</span>
+      <span><i style="background:#e07b1f"></i>Africa · 5</span>
+      <span><i style="background:#7b3fa0"></i>Middle East · 2</span>
+      <span><i style="background:#c2187a"></i>Oceania · 1</span>
+      <span><i style="background:#555555"></i>Global/Space · 4</span>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><div class="t">ALSO ON FRIDAY</div><div class="ln"></div><div class="n">20 more sourced stories</div></div>
+<section class="notes">
+  <div>
+    <div class="note"><span class="no">17</span><span><b>California, USA:</b> magnitude 5.0 quake near Pinnacles, 06:49 UTC; no casualties.</span></div>
+    <div class="note"><span class="no">18</span><span><b>Saudi Arabia:</b> air defences destroyed a Houthi missile and drones, officials said.</span></div>
+    <div class="note"><span class="no">19</span><span><b>Myanmar:</b> the junta dismissed the ICJ genocide verdict as “unfair”.</span></div>
+    <div class="note"><span class="no">20</span><span><b>Malawi:</b> fuel rationed to 20 litres a day as overnight queues lengthened.</span></div>
+    <div class="note"><span class="no">21</span><span><b>Worldwide:</b> UNICEF marked World Children's Day — “My day. My rights. My future.”</span></div>
+    <div class="note"><span class="no">22</span><span><b>Las Vegas, USA:</b> George Russell fastest in wet F1 practice, 1:47.272.</span></div>
+    <div class="note"><span class="no">23</span><span><b>Turin, Italy:</b> Alexander Zverev reached the ATP Finals semi-finals unbeaten at 3–0.</span></div>
+    <div class="note"><span class="no">24</span><span><b>Seoul, South Korea:</b> Kakao founder Kim Beom-su was cleared again in the SM stock case.</span></div>
+    <div class="note"><span class="no">25</span><span><b>Markets:</b> spot gold slipped to about $3,525 an ounce, down roughly 9% on the week.</span></div>
+    <div class="note"><span class="no">26</span><span><b>New Delhi, India:</b> a Pakistani minister visited for the first time in three years.</span></div>
+  </div>
+  <div>
+    <div class="note"><span class="no">27</span><span><b>Kharkiv, Ukraine:</b> drone struck a hospital — four hurt, 50+ windows shattered.</span></div>
+    <div class="note"><span class="no">28</span><span><b>Yenne, Senegal:</b> four bodies recovered after a migrant boat capsized.</span></div>
+    <div class="note"><span class="no">29</span><span><b>Cincinnati, USA:</b> Fiona the hippo died after swallowing a visitor's item, the zoo said.</span></div>
+    <div class="note"><span class="no">30</span><span><b>Dnipropetrovsk, Ukraine:</b> drone strikes injured five across four districts.</span></div>
+    <div class="note"><span class="no">31</span><span><b>Haiti:</b> police said 34 suspected gang members were killed in operations.</span></div>
+    <div class="note"><span class="no">32</span><span><b>Kenya:</b> the last Ebola patient was discharged, 37 days after the first case.</span></div>
+    <div class="note"><span class="no">33</span><span><b>Italy:</b> regulators fined Meta €805m over Android photo access.</span></div>
+    <div class="note"><span class="no">34</span><span><b>United States:</b> an FAA ground stop held about 1.5 million travellers.</span></div>
+    <div class="note"><span class="no">35</span><span><b>South Kordofan, Sudan:</b> ten killed in a drone strike at a gold mine, reported.</span></div>
+    <div class="note"><span class="no">36</span><span><b>Berlin, Germany:</b> Chancellor Merz rejected any “new Yalta” for Europe.</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="check">
+    <div class="h">DATE CHECK — THURSDAY, NOT COUNTED</div>
+    <p>Excluded from the 36 as <b>Thursday 19 November</b> news: the Shenzhen summit, Anthropic's Nasdaq debut, the ICJ ruling on Myanmar, Indonesia's asset-forfeiture law, Denmark's Greenland defence vote.</p>
+  </div>
+  <div class="tally">
+    <div class="h">36 STORIES BY REGION</div>
+    <div class="chips"><span>Europe <b>10</b></span><span>Asia <b>7</b></span><span>Americas <b>7</b></span><span>Africa <b>5</b></span><span>Global/Space <b>4</b></span><span>Middle East <b>2</b></span><span>Oceania <b>1</b></span></div>
+  </div>
+</footer>
+<div class="fine">Every story here occurred or was first reported on Friday 20 November 2026. <b>Sources:</b> Reuters, IMD/PTI, ESA, ICC, EORTC, Windward, Al Jazeera, Helsinki Times, UNICEF. Single-source claims are attributed (“police said”, “reported”). Original editorial drawings.</div>
+
+</body>
+</html>
